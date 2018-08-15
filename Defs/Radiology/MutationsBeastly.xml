@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+<HediffDef ParentName="RadiologyMutation" Class="Radiology.MutationSetSkillDef">
+    <defName>MutationTankBeast</defName>
+    <label>Berserker</label>
+    <description>The colonist is no longer capable of normal human life, they've been so extremely mutated that every tissue in their body has been either enhanced or destroyed. In this colonist's case, they've effectively become a tank berserker.</description>
+    <relatedParts><li>Torso</li></relatedParts>
+    <affectedParts><li>Torso</li></affectedParts>
+    <exclusive>Beastly</exclusive>
+    <affectsAllParts>true</affectsAllParts>
+
+    <stage>
+      <capMods>
+        <li><capacity>Hearing</capacity><offset>0.75</offset></li>
+        <li><capacity>Sight</capacity><offset>0.75</offset></li>
+        <li><capacity>Consciousness</capacity><offset>0.75</offset></li>
+        <li><capacity>Manipulation</capacity><offset>0.75</offset></li>
+        <li><capacity>Talking</capacity><offset>-1</offset></li>
+        <li><capacity>Moving</capacity><offset>0.1</offset></li>
+      </capMods>
+      
+      <statOffsets>
+        <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+        <MeleeHitChance>15</MeleeHitChance>
+        <GlobalLearningFactor>-1</GlobalLearningFactor>
+        <HungerRateMultiplier>-1</HungerRateMultiplier>
+        <CarryingCapacity>1.5</CarryingCapacity>
+        <PainShockThreshold>0.99</PainShockThreshold>
+      </statOffsets>
+      
+      <socialFightChanceFactor>2.5</socialFightChanceFactor>
+    </stage>
+    
+  
+    
+    <skill>Melee</skill>
+    <setTo>20</setTo>
+    
+    
+   </HediffDef>
+  </Defs>

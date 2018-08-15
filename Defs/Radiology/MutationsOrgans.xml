@@ -81,6 +81,8 @@
     <affectedParts><li>Brain</li></affectedParts>
     <exclusive>Brain</exclusive>
     <affectsAllParts>false</affectsAllParts>
+    
+    <likelihood>0.6</likelihood>
 
     <stage>
       <capMods>
@@ -90,6 +92,10 @@
         <li><capacity>Manipulation</capacity><offset>0.10</offset></li>
       </capMods>
     </stage>
+    
+    <skill>Intellectual</skill>
+    <setTo>15</setTo>
+    
    </HediffDef>
    
    <!-- ++++++++++++++++++++++++++++ -->
