@@ -3,7 +3,7 @@
 <Defs>
 <HediffDef ParentName="RadiologyMutation" Class="Radiology.MutationSetSkillDef">
     <defName>MutationTankBeast</defName>
-    <label>Berserker</label>
+    <label>Berserker Mutation</label>
     <description>The colonist is no longer capable of normal human life, they've been so extremely mutated that every tissue in their body has been either enhanced or destroyed. In this colonist's case, they've effectively become a tank berserker.</description>
     <relatedParts><li>Torso</li></relatedParts>
     <affectedParts><li>Torso</li></affectedParts>
@@ -28,13 +28,99 @@
         <PainShockThreshold>0.99</PainShockThreshold>
       </statOffsets>
       
-      <socialFightChanceFactor>2.5</socialFightChanceFactor>
+      <socialFightChanceFactor>5</socialFightChanceFactor>
     </stage>
    
    <skills>
     <li>
        <skill>Melee</skill>
        <setTo>20</setTo> 
+    </li>
+    
+    <li>
+       <skill>Plants</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Shooting</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Social</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Crafting</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Artistic</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Intellectual</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Construction</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Cooking</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Medicine</skill>
+       <setTo>-1</setTo> 
+    </li>
+    </skills>
+   </HediffDef>
+   
+   <!-- End of Tank beast -->
+   <!-- +++++++++++++++++ -->
+   <!-- Start of Wraith beast -->
+   
+   <HediffDef ParentName="RadiologyMutation" Class="Radiology.MutationSetSkillDef">
+    <defName>MutationFastBeast</defName>
+    <label>Wraith Mutation</label>
+    <description>The colonist is no longer capable of normal human life, they've been so extremely mutated that every tissue in their body has been either enhanced or destroyed. In this colonist's case, they've effectively become a fast and agile killer.</description>
+    <relatedParts><li>Torso</li></relatedParts>
+    <affectedParts><li>Torso</li></affectedParts>
+    <exclusive>Beastly</exclusive>
+    <affectsAllParts>true</affectsAllParts>
+
+    <stage>
+      <capMods>
+        <li><capacity>Hearing</capacity><offset>0.80</offset></li>
+        <li><capacity>Sight</capacity><offset>0.80</offset></li>
+        <li><capacity>Consciousness</capacity><offset>0.50</offset></li>
+        <li><capacity>Manipulation</capacity><offset>0.50</offset></li>
+        <li><capacity>Moving</capacity><offset>0.80</offset></li>
+      </capMods>
+      
+      <statOffsets>
+        <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+        <MeleeHitChance>8</MeleeHitChance>
+        <GlobalLearningFactor>-1</GlobalLearningFactor>
+        <HungerRateMultiplier>-1</HungerRateMultiplier>
+        <PainShockThreshold>0.99</PainShockThreshold>
+      </statOffsets>
+      
+      <socialFightChanceFactor>5</socialFightChanceFactor>
+    </stage>
+   
+   <skills>
+    <li>
+       <skill>Melee</skill>
+       <setTo>15</setTo> 
     </li>
     
     <li>
