@@ -16,7 +16,6 @@
         <li><capacity>Sight</capacity><offset>0.75</offset></li>
         <li><capacity>Consciousness</capacity><offset>0.75</offset></li>
         <li><capacity>Manipulation</capacity><offset>0.75</offset></li>
-        <li><capacity>Talking</capacity><offset>-1</offset></li>
         <li><capacity>Moving</capacity><offset>0.1</offset></li>
       </capMods>
       
@@ -31,12 +30,57 @@
       
       <socialFightChanceFactor>2.5</socialFightChanceFactor>
     </stage>
+   
+   <skills>
+    <li>
+       <skill>Melee</skill>
+       <setTo>20</setTo> 
+    </li>
     
-  
+    <li>
+       <skill>Plants</skill>
+       <setTo>-1</setTo> 
+    </li>
     
-    <skill>Melee</skill>
-    <setTo>20</setTo>
+    <li>
+       <skill>Shooting</skill>
+       <setTo>-1</setTo> 
+    </li>
     
+    <li>
+       <skill>Social</skill>
+       <setTo>-1</setTo> 
+    </li>
     
+    <li>
+       <skill>Crafting</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Artistic</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Intellectual</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Construction</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Cooking</skill>
+       <setTo>-1</setTo> 
+    </li>
+    
+    <li>
+       <skill>Medicine</skill>
+       <setTo>-1</setTo> 
+    </li>
+    </skills>
    </HediffDef>
   </Defs>
