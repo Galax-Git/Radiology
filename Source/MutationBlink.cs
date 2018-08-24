@@ -9,7 +9,7 @@ using Verse.AI;
 
 namespace Radiology
 {
-    public class MutationBlinkDef : HediffMutationDef
+    public class MutationBlinkDef : MutationDef
     {
         public MutationBlinkDef() { hediffClass = typeof(MutationBlink); }
 
@@ -19,8 +19,8 @@ namespace Radiology
         public bool aimed;
         public int cooldownTicks = 240;
 
-        public AutomaticEffectSpawnerDef effectOut;
-        public AutomaticEffectSpawnerDef effectIn;
+        public RadiologyEffectSpawnerDef effectOut;
+        public RadiologyEffectSpawnerDef effectIn;
     }
 
     public class MutationBlink : Mutation<MutationBlinkDef>
@@ -30,7 +30,7 @@ namespace Radiology
             base.Tick();
 
             if (cooldown > 0) cooldown--;
-
+            if (pawn.Map == null) return;
             if (!MathHelper.CheckMtthDays(def.mtthDays)) return;
 
             BlinkRandomly();
@@ -135,13 +135,13 @@ namespace Radiology
         {
             cooldown = def.cooldownTicks;
 
-            AutomaticEffectSpawnerDef.Spawn(def.effectOut, pawn);
+            RadiologyEffectSpawnerDef.Spawn(def.effectOut, pawn);
 
             pawn.jobs.StartJob(new Job(RimWorld.JobDefOf.Wait, 1, false), JobCondition.InterruptForced, null, true, false);
             pawn.SetPositionDirect(target);
             pawn.Drawer.tweener.ResetTweenedPosToRoot();
 
-            AutomaticEffectSpawnerDef.Spawn(def.effectIn, pawn);
+            RadiologyEffectSpawnerDef.Spawn(def.effectIn, pawn);
         }
 
         public int cooldown = 0;

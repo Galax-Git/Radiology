@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+<<<<<<< HEAD
   <HediffDef ParentName="RadiologyMutation" Class="Radiology.HediffMutationDef">
     <defName>MutationFastLegs</defName>
+=======
+  <HediffDef ParentName="RadiologyMutation" Class="Radiology.MutationDef">
+    <defName>MutationSuperSpeed</defName>
+>>>>>>> upstream/master
     <label>Super Speed</label>
     <description>The muscles and tendons in the colonist's legs have grown and strengthened giving this colonist insane speed and agility.</description>
     <relatedParts><li>Leg</li></relatedParts>
@@ -19,7 +24,7 @@
     </stage>
   </HediffDef>
   
-  <HediffDef ParentName="RadiologyMutation" Class="Radiology.HediffMutationDef">
+  <HediffDef ParentName="RadiologyMutation" Class="Radiology.MutationDef">
     <defName>MutationCrippledLeg</defName>
     <label>Crippled Leg</label>
     <description>This colonists leg has grown but in a deformed way, crooked and weak, this colonist has difficulty moving.</description>

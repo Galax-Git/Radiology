@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApparelBodyPart.cs" />
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="AutomaticEffectSpawnerDef.cs" />
     <Compile Include="Cancer.cs" />
@@ -78,25 +79,33 @@
     <Compile Include="HediffDefOf.cs" />
     <Compile Include="HelperCompFacility.cs" />
     <Compile Include="IAdvancedFacilityConnector.cs" />
+    <Compile Include="IPrisonerAllowedJob.cs" />
     <Compile Include="IRadiationModifier.cs" />
+    <Compile Include="JobDriverIrradiatePrisoner.cs" />
     <Compile Include="MathHelper.cs" />
     <Compile Include="MoteRadiation.cs" />
     <Compile Include="Mutation.cs" />
-    <Compile Include="HediffMutationDef.cs" />
+    <Compile Include="MutationDef.cs" />
     <Compile Include="HediffRadiation.cs" />
     <Compile Include="JobDefOf.cs" />
     <Compile Include="JobDriverIrradiate.cs" />
     <Compile Include="MutationBlink.cs" />
+    <Compile Include="MutationCarapace.cs" />
     <Compile Include="MutationGlower.cs" />
+    <Compile Include="MutationNightDweller.cs" />
     <Compile Include="MutationPsionicShield.cs" />
+    <Compile Include="MutationRegeneration.cs" />
     <Compile Include="MutationSetSkill.cs" />
-    <Compile Include="MutationsHelper.cs" />
     <Compile Include="MutationVomitItems.cs" />
+    <Compile Include="PatchApparelUtilityHasPartsToWear.cs" />
+    <Compile Include="PatchApparelTrackerTryDrop.cs" />
     <Compile Include="PatchFacilities.cs" />
+    <Compile Include="PatchHealthCardUtilityDrawHediffRow.cs" />
     <Compile Include="PatchHediffGizmos.cs" />
     <Compile Include="PatchHediffSet.cs" />
     <Compile Include="PatchSkillDiabled.cs" />
     <Compile Include="PatchVomiting.cs" />
+    <Compile Include="PatchWorkGiver_Warden_TakeToBedJobOnThing.cs" />
     <Compile Include="PawnHelper.cs" />
     <Compile Include="PlaceWorkerShowFacilitiesConnections.cs" />
     <Compile Include="RadiationCompProperties.cs" />
@@ -105,10 +114,12 @@
     <Compile Include="Radiology.cs" />
     <Compile Include="RecipeRedoDiagnosis.cs" />
     <Compile Include="ResearchDefOf.cs" />
+    <Compile Include="RoomRoleWorker_RadiologyChamber.cs" />
     <Compile Include="SoundDefOf.cs" />
     <Compile Include="ThingDefOf.cs" />
     <Compile Include="ThingHelper.cs" />
     <Compile Include="WorkGiverIrradiate.cs" />
+    <Compile Include="WorkGiverIrradiatePrisoner.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -125,7 +136,7 @@
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties BuildVersion_UpdateFileVersion="True" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_StartDate="2000/1/1" />
+      <UserProperties BuildVersion_StartDate="2000/1/1" BuildVersion_BuildVersioningStyle="None.None.Increment.TimeStamp" BuildVersion_UpdateAssemblyVersion="True" BuildVersion_UpdateFileVersion="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

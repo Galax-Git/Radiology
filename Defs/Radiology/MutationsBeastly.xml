@@ -9,6 +9,8 @@
     <affectedParts><li>Torso</li></affectedParts>
     <exclusive>Beastly</exclusive>
     <affectsAllParts>true</affectsAllParts>
+    
+    <likelihood>0.1</likelihood>
 
     <stage>
       <capMods>
@@ -96,6 +98,8 @@
     <affectedParts><li>Torso</li></affectedParts>
     <exclusive>Beastly</exclusive>
     <affectsAllParts>true</affectsAllParts>
+    
+    <likelihood>0.1</likelihood>
 
     <stage>
       <capMods>

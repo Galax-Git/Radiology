@@ -18,7 +18,7 @@ namespace Radiology
         {
             if (pawn == null) return null;
 
-            return pawn.health.hediffSet.GetNotMissingParts().RandomElementByWeight(x => chamber.def.PartsMap.TryGetValue(x.def, 0f));
+            return pawn.health.hediffSet.GetNotMissingParts().RandomElementByWeight(x => chamber.def.GetPartWeight(pawn, x));
         }
 
         public HediffRadiation GetHediffRadition(BodyPartRecord part, Chamber chamber, Pawn pawn)
@@ -83,11 +83,14 @@ namespace Radiology
             SoundDefOf.RadiologyIrradiateBasic.PlayOneShot(new TargetInfo(parent.Position, parent.Map, false));
             ticksCooldown = ticks;
 
+            if (info.pawn.IsShielded()) return;
+
             info.part = GetBodyPart(info.chamber, info.pawn);
             info.burn = props.burn.perSecond.RandomInRange;
             info.normal = props.mutate.perSecond.RandomInRange;
             info.rare = props.mutateRare.perSecond.RandomInRange;
- 
+            if (info.secondHand) info.rare /= 2;
+
             motesReflectAt.Clear();
             foreach (ThingComp comp in GetModifiers<ThingComp, IRadiationModifier>(info.chamber))
             {
@@ -95,6 +98,8 @@ namespace Radiology
                 {
                     motesReflectAt.Add((parent.Rotation.IsHorizontal ? comp.parent.Position.x : comp.parent.Position.z) + 0.5f);
                 }
+
+                if (info.secondHand) continue;
 
                 IRadiationModifier modifier = comp as IRadiationModifier;
                 modifier.Modify(ref info);
@@ -120,7 +125,7 @@ namespace Radiology
                 info.pawn.TakeDamage(dinfo);
 
                 if (chamber != null)
-                    AutomaticEffectSpawnerDef.Spawn(chamber.def.burnEffect, info.pawn);
+                    RadiologyEffectSpawnerDef.Spawn(chamber.def.burnEffect, info.pawn);
             }
 
             float mutateThreshold = info.chamber.def.mutateThreshold.RandomInRange;
